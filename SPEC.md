@@ -32,14 +32,14 @@ No web service, no UI, no database. A function and a way to run it is all we nee
 
 Everything lives in `fixtures/fixtures.json`.
 
-| Entity | Notes |
-| --- | --- |
-| `volunteers` | Hold qualifications, signed waivers, and group memberships |
-| `opportunities` | A program of work. Carries qualification rules, an optional required waiver, and optional group restrictions |
-| `shifts` | A dated block of time belonging to an opportunity |
-| `openings` | A role within a shift, with its own capacity. This is what a volunteer signs up for |
-| `signups` | Existing signups, either `CONFIRMED` or `WAITLISTED` |
-| `qualifications`, `groups`, `waivers` | Lookup data |
+| Entity                                | Notes                                                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `volunteers`                          | Hold qualifications, signed waivers, and group memberships                                                   |
+| `opportunities`                       | A program of work. Carries qualification rules, an optional required waiver, and optional group restrictions |
+| `shifts`                              | A dated block of time belonging to an opportunity                                                            |
+| `openings`                            | A role within a shift, with its own capacity. This is what a volunteer signs up for                          |
+| `signups`                             | Existing signups, either `CONFIRMED` or `WAITLISTED`                                                         |
+| `qualifications`, `groups`, `waivers` | Lookup data                                                                                                  |
 
 ## The rules
 
@@ -64,17 +64,17 @@ A volunteer already signed up for this opening gets `ALREADY_SIGNED_UP`.
 An opportunity carries any number of qualification rules. **The volunteer must pass
 every active rule**—rules combine with AND.
 
-| Rule type | The volunteer passes when |
-| --- | --- |
-| `HAS_ANY` | They hold at least one of the listed qualifications |
-| `HAS_ALL` | They hold every one of the listed qualifications |
-| `DOES_NOT_HAVE_ALL` | They do not hold all of the listed qualifications |
+| Rule type           | The volunteer passes when                           |
+| ------------------- | --------------------------------------------------- |
+| `HAS_ANY`           | They hold at least one of the listed qualifications |
+| `HAS_ALL`           | They hold every one of the listed qualifications    |
+| `DOES_NOT_HAVE_ALL` | They do not hold all of the listed qualifications   |
 
 A failed `HAS_ANY` or `HAS_ALL` gives `MISSING_QUALIFICATION`. A failed
 `DOES_NOT_HAVE_ALL` gives `DISALLOWED_QUALIFICATION`.
 
 **Worked example.** The Warehouse Sort and Load opportunity carries a
-`DOES_NOT_HAVE_ALL` rule listing *Under 18* and *Lifting Restriction On File*. Fern
+`DOES_NOT_HAVE_ALL` rule listing _Under 18_ and _Lifting Restriction On File_. Fern
 Okonjo (`vol-006`) has a lifting restriction on file, and is not under 18.
 
 Fern is blocked from the Monday Sort loader opening with `DISALLOWED_QUALIFICATION`.
@@ -101,19 +101,19 @@ signups count—a waitlisted one doesn't block anything.
 
 ## Reason codes
 
-| Code | Meaning |
-| --- | --- |
-| `SHIFT_NOT_PUBLISHED` | The shift is not published |
-| `SHIFT_INACTIVE` | The shift has been cancelled |
-| `OPENING_INACTIVE` | The role is no longer offered |
-| `AT_CAPACITY` | The opening is full and has no waitlist |
-| `WAITLIST_FULL` | The opening and its waitlist are both full |
-| `ALREADY_SIGNED_UP` | The volunteer already holds this opening |
-| `MISSING_QUALIFICATION` | A required qualification is absent |
+| Code                       | Meaning                                                |
+| -------------------------- | ------------------------------------------------------ |
+| `SHIFT_NOT_PUBLISHED`      | The shift is not published                             |
+| `SHIFT_INACTIVE`           | The shift has been cancelled                           |
+| `OPENING_INACTIVE`         | The role is no longer offered                          |
+| `AT_CAPACITY`              | The opening is full and has no waitlist                |
+| `WAITLIST_FULL`            | The opening and its waitlist are both full             |
+| `ALREADY_SIGNED_UP`        | The volunteer already holds this opening               |
+| `MISSING_QUALIFICATION`    | A required qualification is absent                     |
 | `DISALLOWED_QUALIFICATION` | The volunteer holds a qualification that excludes them |
-| `WAIVER_REQUIRED` | No current signature on the required waiver |
-| `GROUP_RESTRICTED` | The opportunity is limited to specific groups |
-| `SCHEDULE_CONFLICT` | The volunteer is already committed at this time |
+| `WAIVER_REQUIRED`          | No current signature on the required waiver            |
+| `GROUP_RESTRICTED`         | The opportunity is limited to specific groups          |
+| `SCHEDULE_CONFLICT`        | The volunteer is already committed at this time        |
 
 ## Checking your work
 

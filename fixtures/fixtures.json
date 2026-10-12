@@ -1,7 +1,5 @@
 {
-  "organizations": [
-    { "id": "org-1", "name": "Riverside Community Kitchen" }
-  ],
+  "organizations": [{ "id": "org-1", "name": "Riverside Community Kitchen" }],
   "qualifications": [
     { "id": "qual-food-safety", "name": "Food Safety Certification" },
     { "id": "qual-background-check", "name": "Background Check" },
@@ -16,8 +14,16 @@
     { "id": "group-youth", "name": "Youth Program Participants" }
   ],
   "waivers": [
-    { "id": "waiver-general", "name": "General Liability Waiver", "currentVersion": 2 },
-    { "id": "waiver-kitchen", "name": "Kitchen Safety Waiver", "currentVersion": 1 }
+    {
+      "id": "waiver-general",
+      "name": "General Liability Waiver",
+      "currentVersion": 2
+    },
+    {
+      "id": "waiver-kitchen",
+      "name": "Kitchen Safety Waiver",
+      "currentVersion": 1
+    }
   ],
   "volunteers": [
     {
@@ -30,7 +36,11 @@
     {
       "id": "vol-002",
       "name": "Brook Mensah",
-      "qualificationIds": ["qual-food-safety", "qual-background-check", "qual-first-aid"],
+      "qualificationIds": [
+        "qual-food-safety",
+        "qual-background-check",
+        "qual-first-aid"
+      ],
       "signedWaivers": [
         { "waiverId": "waiver-general", "version": 2 },
         { "waiverId": "waiver-kitchen", "version": 1 }
@@ -61,14 +71,22 @@
     {
       "id": "vol-006",
       "name": "Fern Okonjo",
-      "qualificationIds": ["qual-food-safety", "qual-lifting-restriction", "qual-drivers-license"],
+      "qualificationIds": [
+        "qual-food-safety",
+        "qual-lifting-restriction",
+        "qual-drivers-license"
+      ],
       "signedWaivers": [{ "waiverId": "waiver-general", "version": 1 }],
       "groupIds": []
     },
     {
       "id": "vol-007",
       "name": "Gray Lindqvist",
-      "qualificationIds": ["qual-forklift", "qual-drivers-license", "qual-background-check"],
+      "qualificationIds": [
+        "qual-forklift",
+        "qual-drivers-license",
+        "qual-background-check"
+      ],
       "signedWaivers": [{ "waiverId": "waiver-general", "version": 2 }],
       "groupIds": []
     },
@@ -229,24 +247,125 @@
     }
   ],
   "openings": [
-    { "id": "open-meals-mon-am-server", "shiftId": "shift-meals-mon-am", "roleName": "Prep Cook", "maxVolunteers": 4, "waitlistMax": 2, "isActive": true },
-    { "id": "open-meals-mon-pm-server", "shiftId": "shift-meals-mon-pm", "roleName": "Server", "maxVolunteers": 4, "waitlistMax": 2, "isActive": true },
-    { "id": "open-meals-tue-server", "shiftId": "shift-meals-tue", "roleName": "Server", "maxVolunteers": 2, "waitlistMax": 2, "isActive": true },
-    { "id": "open-meals-tue-full", "shiftId": "shift-meals-tue", "roleName": "Dishwasher", "maxVolunteers": 1, "waitlistMax": 0, "isActive": true },
-    { "id": "open-meals-draft-server", "shiftId": "shift-meals-draft", "roleName": "Server", "maxVolunteers": 4, "waitlistMax": 0, "isActive": true },
-    { "id": "open-meals-cancelled-server", "shiftId": "shift-meals-cancelled", "roleName": "Server", "maxVolunteers": 4, "waitlistMax": 0, "isActive": true },
-    { "id": "open-meals-tue-retired", "shiftId": "shift-meals-tue", "roleName": "Greeter", "maxVolunteers": 2, "waitlistMax": 0, "isActive": false },
-    { "id": "open-warehouse-mon-loader", "shiftId": "shift-warehouse-mon", "roleName": "Loader", "maxVolunteers": 6, "waitlistMax": 0, "isActive": true },
-    { "id": "open-warehouse-mon-late-loader", "shiftId": "shift-warehouse-mon-late", "roleName": "Loader", "maxVolunteers": 6, "waitlistMax": 0, "isActive": true },
-    { "id": "open-youth-tue-mentor", "shiftId": "shift-youth-tue", "roleName": "Mentor", "maxVolunteers": 5, "waitlistMax": 0, "isActive": true },
-    { "id": "open-kitchen-sat-cleaner", "shiftId": "shift-kitchen-sat", "roleName": "Cleaner", "maxVolunteers": 3, "waitlistMax": 0, "isActive": true }
+    {
+      "id": "open-meals-mon-am-server",
+      "shiftId": "shift-meals-mon-am",
+      "roleName": "Prep Cook",
+      "maxVolunteers": 4,
+      "waitlistMax": 2,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-mon-pm-server",
+      "shiftId": "shift-meals-mon-pm",
+      "roleName": "Server",
+      "maxVolunteers": 4,
+      "waitlistMax": 2,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-tue-server",
+      "shiftId": "shift-meals-tue",
+      "roleName": "Server",
+      "maxVolunteers": 2,
+      "waitlistMax": 2,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-tue-full",
+      "shiftId": "shift-meals-tue",
+      "roleName": "Dishwasher",
+      "maxVolunteers": 1,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-draft-server",
+      "shiftId": "shift-meals-draft",
+      "roleName": "Server",
+      "maxVolunteers": 4,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-cancelled-server",
+      "shiftId": "shift-meals-cancelled",
+      "roleName": "Server",
+      "maxVolunteers": 4,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-meals-tue-retired",
+      "shiftId": "shift-meals-tue",
+      "roleName": "Greeter",
+      "maxVolunteers": 2,
+      "waitlistMax": 0,
+      "isActive": false
+    },
+    {
+      "id": "open-warehouse-mon-loader",
+      "shiftId": "shift-warehouse-mon",
+      "roleName": "Loader",
+      "maxVolunteers": 6,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-warehouse-mon-late-loader",
+      "shiftId": "shift-warehouse-mon-late",
+      "roleName": "Loader",
+      "maxVolunteers": 6,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-youth-tue-mentor",
+      "shiftId": "shift-youth-tue",
+      "roleName": "Mentor",
+      "maxVolunteers": 5,
+      "waitlistMax": 0,
+      "isActive": true
+    },
+    {
+      "id": "open-kitchen-sat-cleaner",
+      "shiftId": "shift-kitchen-sat",
+      "roleName": "Cleaner",
+      "maxVolunteers": 3,
+      "waitlistMax": 0,
+      "isActive": true
+    }
   ],
   "signups": [
-    { "volunteerId": "vol-002", "openingId": "open-meals-mon-am-server", "state": "CONFIRMED" },
-    { "volunteerId": "vol-008", "openingId": "open-meals-tue-full", "state": "CONFIRMED" },
-    { "volunteerId": "vol-002", "openingId": "open-meals-tue-server", "state": "CONFIRMED" },
-    { "volunteerId": "vol-006", "openingId": "open-meals-tue-server", "state": "CONFIRMED" },
-    { "volunteerId": "vol-003", "openingId": "open-meals-tue-server", "state": "WAITLISTED" },
-    { "volunteerId": "vol-004", "openingId": "open-warehouse-mon-late-loader", "state": "CONFIRMED" }
+    {
+      "volunteerId": "vol-002",
+      "openingId": "open-meals-mon-am-server",
+      "state": "CONFIRMED"
+    },
+    {
+      "volunteerId": "vol-008",
+      "openingId": "open-meals-tue-full",
+      "state": "CONFIRMED"
+    },
+    {
+      "volunteerId": "vol-002",
+      "openingId": "open-meals-tue-server",
+      "state": "CONFIRMED"
+    },
+    {
+      "volunteerId": "vol-006",
+      "openingId": "open-meals-tue-server",
+      "state": "CONFIRMED"
+    },
+    {
+      "volunteerId": "vol-003",
+      "openingId": "open-meals-tue-server",
+      "state": "WAITLISTED"
+    },
+    {
+      "volunteerId": "vol-004",
+      "openingId": "open-warehouse-mon-late-loader",
+      "state": "CONFIRMED"
+    }
   ]
 }
