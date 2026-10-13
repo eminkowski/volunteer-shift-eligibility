@@ -1,31 +1,23 @@
 {
   "name": "volunteer-shift-eligibility",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "private": true,
+  "type": "commonjs",
   "scripts": {
+    "check": "tsx src/run.ts",
     "test": "vitest run",
+    "typecheck": "tsc",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://eminkowski@github.com/eminkowski/volunteer-shift-eligibility.git"
+    "url": "https://github.com/eminkowski/volunteer-shift-eligibility.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/eminkowski/volunteer-shift-eligibility/issues"
-  },
-  "homepage": "https://github.com/eminkowski/volunteer-shift-eligibility#readme",
   "devDependencies": {
     "@types/node": "^26.6.5",
     "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vitest": "^5.0.4"
   }
